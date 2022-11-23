@@ -23,7 +23,7 @@ selected = option_menu(
 if selected == "About":
     st.title(f"GO to the link for more information-url=https://en.wikipedia.org/wiki/Cyclone#:~:text=In%20meteorology%2C%20a%20cyclone%20(%2F,(opposite%20to%20an%20anticyclone).")
 if selected == "Contact":
-    st.title(f"Email-ananyabhatt502@gmail.com")
+    st.title(f"Email-awanishyadav967@gmail.com")
 
 # ----------------------------------------------Inference script -------------------------------------------------------------
 
