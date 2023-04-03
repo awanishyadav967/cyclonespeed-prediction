@@ -1,12 +1,12 @@
 import streamlit as st
-#from streamlit_option_menu import option_menu
+from streamlit_option_menu import option_menu
 from PIL import Image
 import time
 import os
 import numpy as np
-#import gdown
-#from torchvision import transforms
-#import torch
+import gdown
+from torchvision import transforms
+import torch
 import io
 import base64
 
