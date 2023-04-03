@@ -8,7 +8,7 @@ gdown==4.5.3
 numpy==1.21.4
 pickle-mixin==1.0.2
 streamlit==1.2.0
-streamlit_option_menu==0.3.2
+from streamlit_option_menu import option_menu
 scikit-learn==1.0.1
 torch==1.10.0
 opencv-python-headless==4.5.5.62
