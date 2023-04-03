@@ -6,6 +6,7 @@ streamlit_option_menu==0.3.2
 scikit-learn==1.0.1
 streamlit_option_menu
 torchvision
+transforms
 scikit-learn==1.0.1
 torch==1.10.0
 opencv-python-headless==4.5.5.62
