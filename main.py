@@ -4,7 +4,7 @@ from PIL import Image
 import time
 import os
 import numpy as np
-import gdown
+#import gdown
 from torchvision import transforms
 import torch
 import io
@@ -29,10 +29,11 @@ import base64
 
 # TODO ADD Python inference script
 #PATH = r"./infer/acd_123_34.jpg"
-urla = "https://drive.google.com/uc?id=1XXPduWRnUY582hgfiSddQ2wiz5KR-a0j"
+
+#urla = "https://drive.google.com/uc?id=1XXPduWRnUY582hgfiSddQ2wiz5KR-a0j"
 # model_path = r"./model/final_model.ckpt"
-if not os.path.exists("model.pt"):
-   gdown.download(urla, 'model.pt', quiet=False)
+#if not os.path.exists("model.pt"):
+ #  gdown.download(urla, 'model.pt', quiet=False)
 
 #  upload a file in streamlit
 st.header("Predict Cyclone Satellite Image Windspeed")
