@@ -4,7 +4,7 @@ from PIL import Image
 import time
 import os
 import numpy as np
-import gdown
+#import gdown
 import subprocess
 subprocess.run(["pip", "install", "torchvision==0.10.0"])
 
