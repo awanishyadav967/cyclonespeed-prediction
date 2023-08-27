@@ -5,13 +5,15 @@ import time
 import os
 import numpy as np
 #import gdown
-import subprocess
-subprocess.run(["pip", "install", "torchvision==0.10.0"])
-
 from torchvision import transforms
 import torch
 import io
 import base64
+
+import subprocess
+subprocess.run(["pip", "install", "torchvision==0.10.0"])
+
+
 
 # --------------------------------------NAV BAR------------------------------------------------------------
 
