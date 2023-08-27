@@ -32,7 +32,13 @@ import base64
 
 # ----------------------------------------------Inference script -------------------------------------------------------------
 
+# TODO ADD Python inference script
+#PATH = r"./infer/acd_123_34.jpg"
 
+#urla = "https://drive.google.com/uc?id=1XXPduWRnUY582hgfiSddQ2wiz5KR-a0j"
+# model_path = r"./model/final_model.ckpt"
+#if not os.path.exists("model.pt"):
+ #  gdown.download(urla, 'model.pt', quiet=False)
 
 #  upload a file in streamlit
 st.header("Predict Cyclone Satellite Image Windspeed")
