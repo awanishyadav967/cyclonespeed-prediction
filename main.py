@@ -10,8 +10,8 @@ import torch
 import io
 import base64
 
-import subprocess
-subprocess.run(["pip", "install", "torchvision==0.10.0"])
+#import subprocess
+#subprocess.run(["pip", "install", "torchvision==0.10.0"])
 
 
 
