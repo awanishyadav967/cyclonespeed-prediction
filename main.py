@@ -17,18 +17,18 @@ import base64
 
 # --------------------------------------NAV BAR------------------------------------------------------------
 
-#selected = option_menu(
-#    menu_title=None,
+selected = option_menu(
+    menu_title=None,
 
- #   options=["Home", "About", "Contact"],
- #   menu_icon="cast",
-  #3  orientation="horizontal",
+    options=["Home", "About", "Contact"],
+    menu_icon="cast",
+    orientation="horizontal",
 
-#)
-#if selected == "About":
- #   st.title(f"GO to the link for more information-url=https://en.wikipedia.org/wiki/Cyclone#:~:text=In%20meteorology%2C%20a%20cyclone%20(%2F,(opposite%20to%20an%20anticyclone).")
-#if selected == "Contact":
-    #st.title(f"Email-awanishyadav967@gmail.com")
+)
+if selected == "About":
+    st.title(f"GO to the link for more information-url=https://en.wikipedia.org/wiki/Cyclone#:~:text=In%20meteorology%2C%20a%20cyclone%20(%2F,(opposite%20to%20an%20anticyclone).")
+if selected == "Contact":
+    st.title(f"Email-awanishyadav967@gmail.com")
 
 # ----------------------------------------------Inference script -------------------------------------------------------------
 
