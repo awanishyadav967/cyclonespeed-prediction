@@ -32,13 +32,7 @@ import base64
 
 # ----------------------------------------------Inference script -------------------------------------------------------------
 
-# TODO ADD Python inference script
-#PATH = r"./infer/acd_123_34.jpg"
 
-#urla = "https://drive.google.com/uc?id=1XXPduWRnUY582hgfiSddQ2wiz5KR-a0j"
-# model_path = r"./model/final_model.ckpt"
-#if not os.path.exists("model.pt"):
- #  gdown.download(urla, 'model.pt', quiet=False)
 
 #  upload a file in streamlit
 st.header("Predict Cyclone Satellite Image Windspeed")
@@ -72,7 +66,7 @@ if inp is not None:
 
     c = st.container()
     c.image(inp, caption='Input Cyclone Image')
-    #c.write(f"Actual wind speed of {inp.name.split('.')[0]} in kts is")
+   
     c.metric(label="Predicted Wind Speed", value=str(np.round(output, 2)) + " kts")
 
     i = output
@@ -134,7 +128,7 @@ st.success(f"The radial velocity is {radialvelocity}")
 # -----------------------------------------------------Alert Pdf---------------------------------------
 
 
-#components.html("""<hr style="height:10px;border:none;color:#333;background-color:#333;" /> """)
+
 st.header("Official Alerts")
 
 
