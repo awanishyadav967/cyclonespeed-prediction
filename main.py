@@ -5,14 +5,14 @@ import time
 import os
 import numpy as np
 
-import subprocess
+#import subprocess
 
 # Install torch
-subprocess.run(["pip", "install", "torch"])
+#subprocess.run(["pip", "install", "torch"])
 
 #import gdown
-import torch
-from torchvision import transforms
+#import torch
+#from torchvision import transforms
 
 
 
