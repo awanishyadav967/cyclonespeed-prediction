@@ -1,8 +1,6 @@
 altair==5.0.1
 
-torch==1.9.1+cpu
-torchvision==0.10.1+cpu
-pillow
+
 
 anyio==3.6.2
 argon2-cffi==21.3.0
