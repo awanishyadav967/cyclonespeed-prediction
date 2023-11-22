@@ -6,8 +6,8 @@ import os
 import numpy as np
 
 #import gdown
-#import torch
-#from torchvision import transforms
+import torch
+from torchvision import transforms
 
 
 
