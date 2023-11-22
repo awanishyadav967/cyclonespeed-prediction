@@ -7,6 +7,7 @@ import numpy as np
 #import gdown
 #import torch
 #from torchvision import transforms
+from torchvision import transforms
 
 import io
 import base64
