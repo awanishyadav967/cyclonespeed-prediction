@@ -5,7 +5,7 @@ import time
 import os
 import numpy as np
 #import gdown
-#from torchvision import transforms
+from torchvision import transforms
 #import torch
 import io
 import base64
