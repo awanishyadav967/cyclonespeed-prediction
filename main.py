@@ -6,7 +6,9 @@ import os
 import numpy as np
 
 import subprocess
-subprocess.run(["pip", "install", "torchvision==0.10.0"])
+
+# Install torch
+subprocess.run(["pip", "install", "torch"])
 
 #import gdown
 import torch
