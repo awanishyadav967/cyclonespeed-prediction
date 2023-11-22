@@ -14,7 +14,9 @@ import base64
 #import subprocess
 #subprocess.run(["pip", "install", "torchvision==0.10.0"])
 import subprocess
-subprocess.run(["pip", "install", "torch torchvision pillow"])
+
+# Install necessary libraries
+subprocess.run(["pip", "install", "torch==1.9.1+cpu", "torchvision==0.10.1+cpu", "pillow"])
 
 
 
