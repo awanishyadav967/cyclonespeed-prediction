@@ -12,7 +12,8 @@ import numpy as np
 
 #import gdown
 #import torch
-import transforms
+from torchvision import transforms
+
 
 
 
