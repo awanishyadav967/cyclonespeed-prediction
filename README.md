@@ -38,7 +38,15 @@ To run the Cyclone Intensity Detector locally, follow these steps:
     streamlit run app.py
     ```
 
+
 ## Feedback
 
 If you have any feedback or suggestions, feel free to [open an issue](https://github.com/awanishyadav967/Cyclone-detector/issues) or [submit a pull request](https://github.com/awanishyadav967/Cyclone-detector/pulls).
 
+
+## Demo
+
+You can try out the live demo of the project [here](https://awanishyadav967-cyclonespeed-prediction-main-ph86ib.streamlit.app/).
+
+# note 
+app may went to sleep mode ,click-YES,get this app back up (it will take few second to open)
