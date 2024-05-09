@@ -49,4 +49,4 @@ If you have any feedback or suggestions, feel free to [open an issue](https://gi
 You can try out the live demo of the project [here](https://awanishyadav967-cyclonespeed-prediction-main-ph86ib.streamlit.app/).
 
 # note 
-app may went to sleep mode ,click-YES,get this app back up (it will take few second to open)
+App may went to sleep mode ,click-"Yes,get this app back" (it will take few second to open)
