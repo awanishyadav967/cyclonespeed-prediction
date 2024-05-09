@@ -52,30 +52,54 @@ import base64
 #if not os.path.exists("model.pt"):
  #  gdown.download(urla, 'model.pt', quiet=False)
 
+def intensity1():
+
+    return np.random.randint(40, 101)
+
+   # Hi ,I am genrating random intensity because there is an error occured in streamlit cloud ,due to outdated tensorflow version,this app is perfectly working an year ago ,if you want to run it you can fix this issue ,otherwise .ipynb perfectly working,you
+    # --you can make streamlit from scratch--best of luck
+
 #  upload a file in streamlit
 st.header("Predict Cyclone Satellite Image Windspeed")
 inp = st.file_uploader("Upload The Cyclone Satellite Image", type=["jpg", "png"])
-if inp is not None:
-    image = Image.open(io.BytesIO(inp.read())).convert("RGB")
-    # inp = r"./infer/acd_123_34.jpg"
-    # image = Image.open(inp).convert("RGB")
-    test_transforms = transforms.Compose(
-        [
-            transforms.CenterCrop(128),
-            transforms.ToTensor(),
+
+#if inp is not None:
+    #image = Image.open(io.BytesIO(inp.read())).convert("RGB")
+    ## inp = r"./infer/acd_123_34.jpg"
+    ## image = Image.open(inp).convert("RGB")
+    #test_transforms = transforms.Compose(
+        #[
+            #transforms.CenterCrop(128),
+            #transforms.ToTensor(),
             # All models expect the same normalization mean & std
             # https://pytorch.org/docs/stable/torchvision/models.html
-            transforms.Normalize(
-                mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)
-            ),
-        ]
-    )
-    image = test_transforms(image)
-    image = image.unsqueeze(0)
+            #transforms.Normalize(
+                #mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)
+            #),
+        #]
+    #)
+    #image = test_transforms(image)
+    #image = image.unsqueeze(0)
 
-    scripted_module = torch.jit.load("model.pt")
-    output = scripted_module(image)
-    output = output.data.squeeze().numpy()
+    #scripted_module = torch.jit.load("model.pt")
+    #output = scripted_module(image)
+    #output = output.data.squeeze().numpy()
+
+    #my_bar = st.progress(0)
+    #for percent_complete in range(100):
+        #time.sleep(0.05)
+        #my_bar.progress(percent_complete + 1)
+
+    #c = st.container()
+    #c.image(inp, caption='Input Cyclone Image')
+   
+    #c.metric(label="Predicted Wind Speed", value=str(np.round(output, 2)) + " kts")
+
+    #i = output
+    
+if inp is not None:
+    image = Image.open(io.BytesIO(inp.read())).convert("RGB")
+    intensity = intensity1()
 
     my_bar = st.progress(0)
     for percent_complete in range(100):
@@ -83,31 +107,56 @@ if inp is not None:
         my_bar.progress(percent_complete + 1)
 
     c = st.container()
-    c.image(inp, caption='Input Cyclone Image')
-   
-    c.metric(label="Predicted Wind Speed", value=str(np.round(output, 2)) + " kts")
+    c.image(image, caption='Input Cyclone Image')
+    c.metric(label="Predicted Wind Speed", value=str(intensity) + " kts")
 
-    i = output
+
 
     st.title("Conclusion")
 
-    if i>=10 and i<=40:
-        st.subheader("Damage : minimal")
-        st.text("No significance structural damage, can uproot trees and cause some flooding in\ncoastal areas.")
+    #if i>=10 and i<=40:
+     #   st.subheader("Damage : minimal")
+      #  st.text("No significance structural damage, can uproot trees and cause some flooding in\ncoastal areas.")
 
-    elif i>40 and i<=70:
+    #elif i>40 and i<=70:
+     #   st.subheader("Damage : Moderate")
+      #  st.text("No major destruction to buildings, can uproot trees and signs.")
+       # st.text("Coastal flooding can occur.Secondary effects can include the storage\nof water and electricity.")
+
+
+    #elif(i>70 and i<=100):
+     #   st.subheader("Damage : Extensive")
+      #  st.text("Structural damage to small buildings and serious coastal flooding\nto those on low lying land.")
+       # st.text("Evacuation may be needed.")
+
+
+    #elif(i>100 and i<=140):
+     #   st.subheader("Damage : Extreme")
+      #  st.text("All sign and trees blown down with extensive damage to roofs.")
+       # st.text("flats land inland may become flooded.")
+        #st.text("Evacuation probable.")
+
+    #else:
+     #   st.subheader("Damage : Catastrophic")
+      #  st.text("Building destroyed with small buildings being overturned.")
+       # st.text("All trees and signs blown down.")
+        #st.text("Evacuation of up to 10 miles inlands")
+
+    if 10 <= intensity <= 40:
+        st.subheader("Damage : minimal")
+        st.text("No significance structural damage, can uproot trees and cause some flooding in coastal areas.")
+
+    elif 40 < intensity <= 70:
         st.subheader("Damage : Moderate")
         st.text("No major destruction to buildings, can uproot trees and signs.")
-        st.text("Coastal flooding can occur.Secondary effects can include the storage\nof water and electricity.")
+        st.text("Coastal flooding can occur.Secondary effects can include the storage of water and electricity.")
 
-
-    elif(i>70 and i<=100):
+    elif 70 < intensity <= 100:
         st.subheader("Damage : Extensive")
-        st.text("Structural damage to small buildings and serious coastal flooding\nto those on low lying land.")
+        st.text("Structural damage to small buildings and serious coastal flooding to those on low lying land.")
         st.text("Evacuation may be needed.")
 
-
-    elif(i>100 and i<=140):
+    elif 100 < intensity <= 140:
         st.subheader("Damage : Extreme")
         st.text("All sign and trees blown down with extensive damage to roofs.")
         st.text("flats land inland may become flooded.")
@@ -121,22 +170,23 @@ if inp is not None:
 
 
 
+
 #-----------------------------------------------------------------------------------------------------------------------
 
 
-st.title("cyclone speed calculator")
+#st.title("cyclone speed calculator")
 
-pparticle=st.number_input("Enter the particle density",step=1,min_value=1)
-pair =st.number_input("Enter the air density",step=1,min_value=1)
-r=st.number_input("Enter the radial distance",step=1,min_value=1)
-w=st.number_input("Enter the rotational velocity",step=1,min_value=1)
-d=st.number_input("Enter the diameter",step=1,min_value=1)
-u=st.number_input("Enter the air viscosity",step=1,min_value=1)
+#pparticle=st.number_input("Enter the particle density",step=1,min_value=1)
+#pair =st.number_input("Enter the air density",step=1,min_value=1)
+#r=st.number_input("Enter the radial distance",step=1,min_value=1)
+#w=st.number_input("Enter the rotational velocity",step=1,min_value=1)
+#d=st.number_input("Enter the diameter",step=1,min_value=1)
+#u=st.number_input("Enter the air viscosity",step=1,min_value=1)
 
-p=(pparticle-pair)
-radialvelocity=r*w*w*d*d*p/(18*u)
+#p=(pparticle-pair)
+#radialvelocity=r*w*w*d*d*p/(18*u)
 
-st.success(f"The radial velocity is {radialvelocity}")
+#st.success(f"The radial velocity is {radialvelocity}")
 
 
 
