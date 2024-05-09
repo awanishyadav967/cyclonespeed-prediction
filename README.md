@@ -39,9 +39,9 @@ Tools : Tensorflow-keras,python,Streamlit
 
 ## Screenshots
 
-![Cyclone Intensity Detector](Screenshot1.png)
+# 1 ![Cyclone Intensity Detector](Screenshot1.png)
 
-![Cyclone Intensity Detector](Screenshot2.png)
+# 2 ![Cyclone Intensity Detector](Screenshot2.png)
 
 ## Getting Started
 
