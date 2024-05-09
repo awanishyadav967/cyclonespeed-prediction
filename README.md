@@ -1,20 +1,47 @@
-# Cyclone Intensity Detector
+## Cyclone Intensity Estimation using Deep Learning
 
-This project is a Cyclone Intensity Detector developed using imagery from INSAT-3D, an ISRO satellite. The detector utilizes deep learning techniques to analyze satellite images and predict the intensity of cyclones.
 
-## Overview
+This application provides a user-friendly interface for uploading INSAT-3D IR Satellite Images of cyclones. These images are then processed by a state-of-the-art Deep Convolutional Neural Network (CNN) built using TensorFlow.
 
-The Cyclone Intensity Detector leverages machine learning models trained on INSAT-3D satellite imagery to assess the severity of cyclones. By analyzing various features and patterns in the satellite images, the detector provides valuable insights into the intensity of cyclones, aiding in disaster management and preparedness efforts.
+Our CNN model has been meticulously trained on a diverse dataset of cyclone imagery, comprising raw INSAT-3D satellite images, to accurately estimate cyclone intensity. This eliminates the need for traditional methods, ensuring precise center determination and intensity estimation directly from satellite imagery.
 
-## Features
+**Key Features:**
 
-- **Deep Learning Models**: Utilizes state-of-the-art deep learning models for image analysis.
-- **Real-time Prediction**: Provides real-time predictions of cyclone intensity based on satellite imagery.
-- **User-Friendly Interface**: Offers an intuitive interface for users to upload satellite images and receive intensity predictions.
+1. **Image Upload**: Users can easily upload INSAT-3D IR Satellite Images of cyclones directly through the intuitive interface.
+
+2. **CNN Processing**: The uploaded images are seamlessly passed through our deep CNN model, leveraging cutting-edge TensorFlow technology.
+
+3. **Instant Results**: Within moments, users receive real-time estimations of cyclone intensity in knots, providing swift and accurate insights.
+
+**Benefits:**
+
+- **Accuracy**: Our CNN model delivers highly precise estimations of cyclone intensity, surpassing traditional methods.
+
+- **Efficiency**: By automating the intensity estimation process, users save time and resources, enabling rapid decision-making.
+
+- **Accessibility**: The user-friendly interface makes it accessible to both experts and non-experts in cyclone tracking and analysis.
+
+**Get Started**: Experience the power of AI-driven cyclone intensity estimation by uploading your INSAT-3D IR Satellite Images now!
+
+
+## The Streamlit app is hosted on  Streamlit community cloud.
+
+``Streamlit Link:`` [Link](https://awanishyadav967-cyclonespeed-prediction-main-ph86ib.streamlit.app/)
+
+## Dataset
+
+[Curated Dataset link](https://www.kaggle.com/datasets/sshubam/insat3d-infrared-raw-cyclone-images-20132021)
+
+## Tech Stack Used
+
+Tools : Tensorflow-keras,python,Streamlit
+
 
 ## Screenshots
 
-![Cyclone Intensity Detector](Cyclone.png)
+![Cyclone Intensity Detector](Screenshot1.png)
+
+![Cyclone Intensity Detector](Screenshot2.png)
 
 ## Getting Started
 
@@ -48,5 +75,5 @@ If you have any feedback or suggestions, feel free to [open an issue](https://gi
 
 You can try out the live demo of the project [here](https://awanishyadav967-cyclonespeed-prediction-main-ph86ib.streamlit.app/).
 
-# note 
+# Note 
 App may went to sleep mode ,click-"Yes,get this app back" (it will take few second to open)
