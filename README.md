@@ -32,6 +32,10 @@ Our CNN model has been meticulously trained on a diverse dataset of cyclone imag
 
 [Curated Dataset link](https://www.kaggle.com/datasets/sshubam/insat3d-infrared-raw-cyclone-images-20132021)
 
+##Jupyter Code
+
+[Google drive link](https://drive.google.com/file/d/1dm3Q_mTmZrdhOI6y-fOWfFCJU3n2jOKx/view?usp=sharing).
+
 ## Tech Stack Used
 
 Tools : Tensorflow-keras,python,Streamlit
